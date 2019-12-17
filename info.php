@@ -1,9 +1,8 @@
 <?php 
-phpinfo();
+//phpinfo();
 
 
-#А здесь хуй с маслом!
-dkfj();
+echo strftime('%D'). "\n";
 
 
 ?>
