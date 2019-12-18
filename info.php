@@ -1,8 +1,9 @@
 <?php 
-//phpinfo();
+error_reporting(E_ALL);
 
-
-echo strftime('%D'). "\n";
+echo 1;
+echo $x;
+echo 3;
 
 
 ?>

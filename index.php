@@ -1,3 +1,12 @@
+<?php
+// Установка локали и выбор значений даты
+//setlocale(LC_ALL, "russian");
+//var_dump(setlocale(LC_ALL, 'ru_RU.UTF-8'));
+setlocale(LC_ALL, 'ru_RU.UTF-8');
+$day = strftime('%d');
+$mon = strftime('%B');
+$year = strftime('%Y');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -22,7 +31,12 @@
     <!-- Заголовок -->
     <!-- Область основного контента -->
     <blockquote>
-    	<?php echo strftime('Сегодня %d-%m-%Y'); ?>
+    	<?php 
+      
+      //echo 'Сегодня ', $day, ' число, ', $mon, ' месяц, ', $year, ' год.';
+      echo "Сегодня: {$day} {$mon} {$year} года";
+      
+      ?>
     </blockquote>
     <h3>Зачем мы ходим в школу?</h3>
     <p>
@@ -58,7 +72,7 @@
   </div>
   <div id="footer">
     <!-- Нижняя часть страницы -->
-    &copy; Супер Мега Веб-мастер, 2000 &ndash; 2015
+    &copy; Супер Мега Веб-мастер, 2000 &ndash; <?=$year?>
     <!-- Нижняя часть страницы -->
   </div>
 </body>
