@@ -1,9 +1,9 @@
 <?php 
-error_reporting(E_ALL);
 
-echo 1;
-echo $x;
-echo 3;
+
+echo "Это будет развернуто: \n в две строки";
+echo "<hr>";
+echo 'А Это не будет развернуто: \n в две строки';
 
 
 ?>
