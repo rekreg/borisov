@@ -17,6 +17,7 @@ echo "<hr>";
 echo "А это измененный последний символ строки: (". $test{ strlen($test) - 1}. ")";
 echo "<hr>";
 echo $test;
+echo "<hr>";
  
 
 ?>
