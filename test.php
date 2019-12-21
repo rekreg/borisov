@@ -1,24 +1,13 @@
 <?php
-$name = "Андрей";
-$age = "35";
 
-/*echo "Меня зовут $name, и мне ребятишки $age лет";*/
+$x = true;
+$y = false;
 
-$test = 'This is a test.';
+$z = NULL;
 
-echo $test; 
-echo "<hr>";
-echo "А это первый символ переменной тест: ".$test{0};
+//unset($x);
 
-echo "А это последний символ строки: (". $test{ strlen($test) - 1}. ")";
-
-$test{ strlen($test) - 1} = "!";
-echo "<hr>";
-echo "А это измененный последний символ строки: (". $test{ strlen($test) - 1}. ")";
-echo "<hr>";
-echo $test;
-echo "<hr>";
-echo "<hr>";
+echo var_dump($z);
  
 
 ?>
