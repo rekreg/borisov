@@ -33,8 +33,7 @@ $year = strftime('%Y');
     <blockquote>
     	<?php 
       
-      //echo 'Сегодня ', $day, ' число, ', $mon, ' месяц, ', $year, ' год.';
-      echo "Сегодня: {$day} {$mon} {$year} года";
+      echo "Сегодня: {$day} {$mon}, {$year} года.";
       
       ?>
     </blockquote>
