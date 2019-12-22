@@ -1,13 +1,9 @@
 <?php
 
-$x = true;
-$y = false;
+$shop = false ;
 
-$z = NULL;
+if($shop)
+	echo "Иду в магазин";
+echo "<br>Иду домой";
 
-//unset($x);
-
-echo var_dump($z);
- 
-
-?>
+?> 
