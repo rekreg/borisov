@@ -1,12 +1,20 @@
 <?php
 
-$result = ini_get("post_max_size");
+$user = [
+	"name" => "John",
+	"login" => "root",
+	"password" => "1234"
+];
+//echo $user[0];
 
-/*8M
-256K
-1G
-134554*/
-	
-	
-var_dump($result);
-?> 
+$user["age"] = 25;
+$user[] = true;
+
+
+echo "<pre>";
+	print_r($user);
+echo "</pre>";
+
+
+
+?>
