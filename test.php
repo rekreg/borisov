@@ -1,9 +1,12 @@
 <?php
 
-$shop = false ;
+$result = ini_get("post_max_size");
 
-if($shop)
-	echo "Иду в магазин";
-echo "<br>Иду домой";
-
+/*8M
+256K
+1G
+134554*/
+	
+	
+var_dump($result);
 ?> 
