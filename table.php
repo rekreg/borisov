@@ -1,30 +1,32 @@
 <?php
 
-$cols = 30;
-$rows = 30;
-$color = "hotpink";
+function drawTable($cols=10, $rows=10, $color="hotpink") {
+	
+	$tbl = "<table border='1' width='200'>";
 
-$tbl = "<table border='1' width='200'>";
- 
-for($tr = 1; $tr <= $rows; $tr++):
+	for($tr = 1; $tr <= $rows; $tr++):
 
-	$tbl .= "<tr>";
+		$tbl .= "<tr>";
 
-	for($td = 1; $td <= $cols; $td++):
-		
-		if ($tr === 1 || $td === 1):
-			$tbl .= "<th style='text-align: center; background-color: {$color};'>".$tr * $td."</th>";
-		else:
-			$tbl .= "<td style='text-align: center;'>".$tr * $td."</td>";
-		endif;
-		
-  endfor; // for 2
+		for($td = 1; $td <= $cols; $td++):
 
-	$tbl .= "</tr>";
+			if ($tr === 1 || $td === 1):
+				$tbl .= "<th style='text-align: center; background-color: {$color};'>".$tr * $td."</th>";
+			else:
+				$tbl .= "<td style='text-align: center;'>".$tr * $td."</td>";
+			endif;
 
-endfor; // for 1
-     
-$tbl .= "</table>";
+		endfor; // for 2
+
+		$tbl .= "</tr>";
+
+	endfor; // for 1
+
+	$tbl .= "</table>";
+	
+	return $tbl;
+
+} // end drawTable();
 
 ?>
 
@@ -69,7 +71,7 @@ $tbl .= "</table>";
       <input type='submit' value='Создать' />
     </form>
     <!-- Таблица -->
-    <?=$tbl?>
+    <?=drawTable(30, 30, "red")?>
     <!-- Таблица -->
     <!-- Область основного контента -->
   </div>

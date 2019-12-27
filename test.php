@@ -1,17 +1,36 @@
 <?php
 
+	//$cnt = 0;
+function hello() {
+	static $cnt;
+	echo "Функция исполняется: ".++$cnt. "<br>";
+	echo "Hello!<br>";
+	
+}
 
-function say_hello($name, $h) {
+hello();
+hello();
+hello();
+
+
+
+
+
+
+/*
+
+function say_hello($name="Guest", $h=3) {
 	echo "<h{$h}>Hello, {$name}!</h{$h}>";
 }
 
 
-say_hello("John", 1);
-say_hello("Mike", 2);
+say_hello("John");
+say_hello("Mike");
 
 $str = "say_hello";
 $str("Guest", 3);
 
+*/
 
 
 /*
