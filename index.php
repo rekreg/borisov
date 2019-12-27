@@ -21,7 +21,32 @@ elseif($hour >= 18 and $hour < 23):
 endif;
 
 	
-	
+// Инициализация массива меню
+		
+		$leftMenu = [
+			['link' => 'Домой', 'href' => 'index.php'],
+			['link' => 'О нас', 'href' => 'about.php'],
+			['link' => 'Контакты', 'href' => 'contact.php'],
+			['link' => 'Таблица умножения', 'href' => 'table.php'],
+			['link' => 'Калькулятор', 'href' => 'calc.php'],
+			
+		];
+		
+
+
+
+		$menu = "<ul>";
+		
+		foreach($leftMenu as $item):
+			$menu .= "<li>";
+				$menu .= "<a href='{$item["href"]}'>";
+					$menu .= $item["link"];
+				$menu .= "</a>";
+ 			$menu .= "</li>";
+		endforeach;
+		
+		$menu .= "</ul>";
+
 
 
 
@@ -73,29 +98,7 @@ endif;
 		<!-- Навигация -->
 		<h2>Навигация по сайту</h2>
 		<!-- Меню -->
-		<?php
-		$leftMenu = [
-			['link' => 'Домой', 'href' => 'index.php'],
-			['link' => 'О нас', 'href' => 'about.php'],
-			['link' => 'Контакты', 'href' => 'contact.php'],
-			['link' => 'Таблица умножения', 'href' => 'table.php'],
-			['link' => 'Калькулятор', 'href' => 'calc.php'],
-			
-		];
-		
-		?>
-		<ul>
-			<li><a href='<?=$leftMenu[0]['href']?>'><?=$leftMenu[0]['link']?></a>
-			</li>
-			<li><a href='<?=$leftMenu[1]['href']?>'><?=$leftMenu[1]['link']?></a>
-			</li>
-			<li><a href='<?=$leftMenu[2]['href']?>'><?=$leftMenu[2]['link']?></a>
-			</li>
-			<li><a href='<?=$leftMenu[3]['href']?>'><?=$leftMenu[3]['link']?></a>
-			</li>
-			<li><a href='<?=$leftMenu[4]['href']?>'><?=$leftMenu[4]['link']?></a>
-			</li>
-		</ul>
+		<?=$menu?>
 		<!-- Меню -->
 		<!-- Навигация -->
 	</div>
