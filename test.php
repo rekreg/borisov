@@ -1,5 +1,20 @@
 <?php
 
+
+function say_hello($name, $h) {
+	echo "<h{$h}>Hello, {$name}!</h{$h}>";
+}
+
+
+say_hello("John", 1);
+say_hello("Mike", 2);
+
+$str = "say_hello";
+$str("Guest", 3);
+
+
+
+/*
 $nums = [1,2,3,4];
 
 echo "<pre>";
@@ -13,6 +28,7 @@ endforeach;
 echo "<pre>";
 print_r($nums);
 echo "</pre>";
+*/
 
 
 /*$user = [
