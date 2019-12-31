@@ -1,20 +1,19 @@
 <?php
 
-	//$cnt = 0;
-function hello() {
-	static $cnt;
-	echo "Функция исполняется: ".++$cnt. "<br>";
-	echo "Hello!<br>";
-	
+
+function area_of_disk($r) {
+	return 3.14 * $r * $r;
 }
 
-hello();
-hello();
-hello();
+
+function area_of_ring($big, $small) {
+	$b = area_of_disk($big);
+	$s = area_of_disk($small);
+	return $b - $s ;
+}
 
 
-
-
+echo area_of_ring(90, 40);
 
 
 /*

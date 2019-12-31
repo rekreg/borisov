@@ -35,20 +35,21 @@ endif;
 
 
 
-		$menu = "<ul>";
-		
-		foreach($leftMenu as $item):
-			$menu .= "<li>";
-				$menu .= "<a href='{$item["href"]}'>";
-					$menu .= $item["link"];
-				$menu .= "</a>";
- 			$menu .= "</li>";
+function drawMenu($menu, $vertical = true) {
+	
+	$gorizontal = "<li style='display:inline; margin-right:15px; padding:3px;'>";
+	
+	$output = "<ul>";
+		foreach($menu as $item):
+			$output .= ($vertical) ? "<li>" : $gorizontal;
+				$output .= "<a href='{$item["href"]}'>";
+					$output .= $item["link"];
+				$output .= "</a>";
+ 			$output .= "</li>";
 		endforeach;
-		
-		$menu .= "</ul>";
-
-
-
+		$output .= "</ul>";
+	return $output;
+}
 
 ?>
 <!DOCTYPE html>
@@ -98,7 +99,7 @@ endif;
 		<!-- Навигация -->
 		<h2>Навигация по сайту</h2>
 		<!-- Меню -->
-		<?=$menu?>
+		<?=drawMenu($leftMenu)?>
 		<!-- Меню -->
 		<!-- Навигация -->
 	</div>
