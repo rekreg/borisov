@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1); 
 
-function area_of_disk($r) {
+function area_of_disk(int $r):int {
+	//return "fl";
 	return 3.14 * $r * $r;
 }
 
@@ -13,7 +15,7 @@ function area_of_ring($big, $small) {
 }
 
 
-echo area_of_ring(90, 40);
+echo area_of_disk("45");
 
 
 /*
