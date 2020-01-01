@@ -1,6 +1,37 @@
 <?php
 
-declare(strict_types=1); 
+
+
+echo "<pre>";
+print_r(getdate());
+echo "</pre>";
+
+
+
+
+
+
+
+
+/*
+$s = "Приветик";
+
+echo ucfirst($s);
+
+*/
+
+
+
+/*$a = 1;
+$b = 2;
+$c = 3;
+$d = null;
+
+var_dump(isset($a, $b, $c));*/
+
+
+
+/*declare(strict_types=1); 
 
 function area_of_disk(int $r):int {
 	//return "fl";
@@ -15,7 +46,7 @@ function area_of_ring($big, $small) {
 }
 
 
-echo area_of_disk("45");
+echo area_of_disk("45");*/
 
 
 /*
