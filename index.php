@@ -1,56 +1,7 @@
 <?php
-// Установка локали и выбор значений даты
-//setlocale(LC_ALL, "russian");
-//var_dump(setlocale(LC_ALL, 'ru_RU.UTF-8'));
-setlocale(LC_ALL, 'ru_RU.UTF-8');
-$day = strftime('%d');
-$mon = strftime('%B');
-$year = strftime('%Y');
-
-
-//
-$hour = (int) strftime('%H');   
-$welcome = "Доброй ночи";
-
-if($hour >= 6 and $hour < 12):
-	$welcome = "Доброе утро";
-elseif($hour >= 12 and $hour < 18):
-	$welcome = "Добрый день";
-elseif($hour >= 18 and $hour < 23):
-	$welcome = "Добрый вечер";
-endif;
-
-	
-// Инициализация массива меню
-		
-		$leftMenu = [
-			['link' => 'Домой', 'href' => 'index.php'],
-			['link' => 'О нас', 'href' => 'about.php'],
-			['link' => 'Контакты', 'href' => 'contact.php'],
-			['link' => 'Таблица умножения', 'href' => 'table.php'],
-			['link' => 'Калькулятор', 'href' => 'calc.php'],
-			
-		];
-		
-
-
-
-function drawMenu($menu, $vertical = true) {
-	
-	$gorizontal = "<li style='display:inline; margin-right:15px; padding:3px;'>";
-	
-	$output = "<ul>";
-		foreach($menu as $item):
-			$output .= ($vertical) ? "<li>" : $gorizontal;
-				$output .= "<a href='{$item["href"]}'>";
-					$output .= $item["link"];
-				$output .= "</a>";
- 			$output .= "</li>";
-		endforeach;
-		$output .= "</ul>";
-	return $output;
-}
-
+require_once("inc/lib.inc.php");
+set_error_handler("myError");
+require_once("inc/data.inc.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -65,8 +16,9 @@ function drawMenu($menu, $vertical = true) {
 
 	<div id="header">
 		<!-- Верхняя часть страницы -->
-		<img src="logo.gif" width="187" height="29" alt="Наш логотип" class="logo" />
-		<span class="slogan">приходите к нам учиться</span>
+		<?php 
+		require_once("inc/top.inc.php");
+		?>
 		<!-- Верхняя часть страницы -->
 	</div>
 
@@ -75,37 +27,23 @@ function drawMenu($menu, $vertical = true) {
 		<h1><?=$welcome?>, гость!</h1>
 		<!-- Заголовок -->
 		<!-- Область основного контента -->
-		<blockquote>
-			<?php 
-      
-      echo "Сегодня: {$day} {$mon}, {$year} года.";
-      
-      ?>
-		</blockquote>
-		<h3>Зачем мы ходим в школу?</h3>
-		<p>
-			У нас каждую минуту что-то происходит и кипит жизнь. Проходят уроки и шумят перемены, кто-то отвечает у доски, кто-то отчаянно зубрит перед контрольной пройденный материал, кому-то ставят «пятерку» за сочинение, кого-то ругают за непрочитанную книгу, на школьной спортивной площадке ребята играют в футбол, а девочки – в волейбол, некоторые готовятся к соревнованиям, другие участвуют в репетициях праздников…
-		</p>
-		<h3>Что такое ЕГЭ?</h3>
-		<p>
-			Аббревиатура ЕГЭ расшифровывается как "Единый Государственный Экзамен". Почему "единый"? ЕГЭ одновременно является и вступительным экзаменом в ВУЗ и итоговой оценкой каждого выпускника школы. К тому же на всей территории России используются однотипные задания и единая система оценки.
-		</p>
-		<p>
-			Результаты ЕГЭ оцениваются по 100-балльной и пятибалльной системам и заносятся в свидетельство о результатах единого государственного экзамена. Срок действия данного документа истекает 31 декабря года, следующего за годом его выдачи, поэтому у абитуриентов есть возможность поступать в ВУЗы со свидетельством ЕГЭ в течение двух лет.
-		</p>
+		<?php 
+		require_once("inc/index.inc.php");
+		?>
 		<!-- Область основного контента -->
 	</div>
 	<div id="nav">
 		<!-- Навигация -->
-		<h2>Навигация по сайту</h2>
-		<!-- Меню -->
-		<?=drawMenu($leftMenu)?>
-		<!-- Меню -->
+		<?php 
+		require_once("inc/menu.inc.php");
+		?>
 		<!-- Навигация -->
 	</div>
 	<div id="footer">
 		<!-- Нижняя часть страницы -->
-		&copy; Супер Мега Веб-мастер, 2000 &ndash; <?=$year?>
+		<?php 
+		require_once("inc/bottom.inc.php");
+		?>
 		<!-- Нижняя часть страницы -->
 	</div>
 </body>
