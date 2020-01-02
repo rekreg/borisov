@@ -1,6 +1,7 @@
 <?php
-// Вложения
+// Вложения в файл
 require_once("inc/lib.inc.php");
+
 set_error_handler("myError");
 require_once("inc/data.inc.php");
 ?>
@@ -8,7 +9,7 @@ require_once("inc/data.inc.php");
 <html>
 
 <head>
-	<title>Сайт нашей школы</title>
+	<title>Сайт нашей Школы</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="style.css" />
 </head>
