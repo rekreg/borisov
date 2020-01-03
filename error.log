@@ -1,6 +1,11 @@
-02-01-2020 16:52:02 - Undefined variable: leftMenus в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/inc/menu.inc.php:4
-02-01-2020 16:52:02 - Проблема с отрисовкой меню в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/inc/menu.inc.php:5
-02-01-2020 16:52:02 - Проблема с отрисовкой меню в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/inc/menu.inc.php:5
-02-01-2020 16:59:47 - Undefined variable: leftMenus в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/inc/menu.inc.php:4
-02-01-2020 16:59:47 - Проблема с отрисовкой меню в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/inc/menu.inc.php:5
-02-01-2020 16:59:47 - Проблема с отрисовкой меню в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/inc/menu.inc.php:5
+03-01-2020 21:50:38 - Undefined variable: orerator в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:24
+03-01-2020 21:50:38 - Undefined variable: orerator в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:25
+03-01-2020 21:50:38 - Undefined variable: orerator в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:26
+03-01-2020 21:50:38 - Undefined variable: orerator в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:27
+03-01-2020 22:07:36 - Division by zero в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:27
+03-01-2020 22:17:39 - Undefined variable: num1 в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:64
+03-01-2020 22:17:39 - Undefined variable: operator в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:68
+03-01-2020 22:17:39 - Undefined variable: num2 в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:72
+04-01-2020 01:05:42 - Undefined variable: num1 в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:17
+04-01-2020 01:05:42 - Undefined variable: operator в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:21
+04-01-2020 01:05:42 - Undefined variable: num2 в /Applications/mampstack-7.3.11-0/apache2/htdocs/borisov/calc.php:25

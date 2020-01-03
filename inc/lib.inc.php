@@ -21,7 +21,21 @@ function myError($no, $msg, $file, $line) {
 
 
 
-
+function getPostMaxSize() {
+	$ini_size = ini_get("post_max_size");
+	$letter = $ini_size{strlen($ini_size)-1};
+	$size = (int) $ini_size;
+		
+		
+	switch(strtoupper($letter)):
+		case "G" : $size *= 1024; 
+		case "M" : $size *= 1024; 
+		case "K" : $size *= 1024;
+		//default: $size; 
+	endswitch;
+	
+	return $size;
+}
 
 
 
